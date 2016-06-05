@@ -4,6 +4,9 @@ const artistic = 'images/artistic/';
 
 fs.readdir(`${portraits}`, (err, files) => {
   files.forEach( (fileName) => {
+    if(fileName === '.DS_Store'){
+      return;
+    }
     console.log(fileName);
     rename = fileName.split(' ').join('');
     fs.rename(`${portraits}/${fileName}`, `${portraits}${rename}`)
@@ -12,9 +15,14 @@ fs.readdir(`${portraits}`, (err, files) => {
   });
 });
 
-fs.readdir(`${artistic}/`, (err, files) => {
+fs.readdir(`${artistic}`, (err, files) => {
   files.forEach( (fileName) => {
-    var imageHtml = `<div class="6u"><span class="image fit"><a href="${artistic}/${rename}" data-lightbox="${rename}"><img src="${artistic}/${rename}" alt="" /></a></span></div>`;
+    if(fileName === '.DS_Store'){
+      return;
+    }
+    console.log(fileName);
+    rename = fileName.split(' ').join('');
+    var imageHtml = `<div class="6u"><span class="image fit"><a href="${artistic}${rename}" data-lightbox="${rename}"><img src="${artistic}${rename}" alt="" /></a></span></div>`;
     fs.appendFile('./formatOutput/artistic.txt', imageHtml);
   });
 });

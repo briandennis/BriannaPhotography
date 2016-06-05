@@ -4,6 +4,7 @@ const artistic = 'images/artistic/';
 
 fs.readdir(`${portraits}`, (err, files) => {
   files.forEach( (fileName) => {
+    console.log(fileName);
     rename = fileName.split(' ').join('');
     fs.rename(`${portraits}/${fileName}`, `${portraits}${rename}`)
     var imageHtml = `<div class="6u"><span class="image fit"><a href="${portraits}${rename}" data-lightbox="${rename}"><img src="${portraits}${rename}" alt="" /></a></span></div>`;

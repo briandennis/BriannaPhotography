@@ -1832,3 +1832,7 @@ $baseurl: '{{ site.baseurl }}/images';
 			}
 		}
 	}
+
+.noStyle {
+	border-bottom: none;
+}

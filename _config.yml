@@ -2,14 +2,14 @@
 #
 
 # Site settings
-title: 414 Photography
+title: Photos by BJD
 description: |
   Portraits, Artistic, and Event Photography by Brianna J Dennis
 owner: Brianna Dennis # or company name
 first_published: 2016 # if migrating another site, the year of your first publish
 email: brianna@weneedtofixthis.com
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://414-photography" # the base hostname & protocol for your site
+url: "http://photosbybjd.com" # the base hostname & protocol for your site
 social:
   #email: /contact/
   #flickr:
